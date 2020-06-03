@@ -3,6 +3,9 @@ import {Provider} from 'react-redux';
 
 import store from './store';
 import CourseList from './components/CourseList';
+import PostList from './components/PostList';
+import Form from './components/Form';
+import Input from './components/Input';
 
 function App() {
   const [repositories,setRepositories] = useState([]);
@@ -37,6 +40,14 @@ function App() {
       ))}
     </ul>
     <CourseList />
+    <PostList />
+    <br />
+      <Form>
+        <Input name='name'/>
+        <Input name='email'/>
+        <Input name='password'/>
+        <button type="submit">Enviar</button>
+      </Form>
     </Provider>
   );
 }
